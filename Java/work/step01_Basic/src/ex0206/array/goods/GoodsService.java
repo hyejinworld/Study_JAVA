@@ -11,8 +11,8 @@ public class GoodsService{
 
 
 
-   /**
-      초기치 데이터를 세팅하는 메소드
+
+ //     초기치 데이터를 세팅하는 메소드
 	  String [][] data = new String [][]{
 			 {"A01" , "새우깡" , "2500" , "짜고 맛나다."},  //---> Goods 
 			 {"A02" , "고구마깡" , "3500" , "고구맛이고 달다."},  //---> Goods 
@@ -21,7 +21,8 @@ public class GoodsService{
 			 {"A05" , "콘칩" , "3000" , "고소하다."}
 			 
 		};
-   */
+   //*/
+	
    public void init(String [][] data){
 	  for(int i =0; i< data.length; i++) {
 		  goodsArr[count++] = this.create(data[i]);
@@ -65,13 +66,13 @@ public class GoodsService{
 
 
 	   //중복체크 
-	  Goods searchGoods = this.selectByCode(goods.getCode());	
-	  if(searchGoods!=null) {
-		  return 0;
-	  }
+	   Goods searchGoods = this.selectByCode(goods.getCode());
+	    if (searchGoods != null) {
+	        return 0;
+	    }
 
 	  goodsArr[GoodsService.count++ ] = goods;
-      return -1;
+      return 1;
    }
 
 
@@ -81,7 +82,6 @@ public class GoodsService{
    public Goods[]  selectAll( ){
      
      // return null;//
-      
       return goodsArr;
    }
 
@@ -109,6 +109,35 @@ public class GoodsService{
 //       }
        return null;
    }
+   
+   public boolean update(Goods goods){ //수정하려는 코드, 변경값 - 가격, 설명
+       
+	   Goods searchGoods = this.selectByCode(goods.getCode());
+	   
+		  if(searchGoods != null){ //있다..
+	          //수정하자.
+	          searchGoods.setPrice( goods.getPrice() );
+			  searchGoods.setExplain( goods.getExplain() );
+
+			  return true;
+		  }
+
+       return false;
+   }
+   
+   /**
+    * 삭제하려는 상품코드에 해당하는 배열의 위치(index) 찾기
+    * @param code
+    * @return
+    */
+  	public int findLocate(String code) {
+  		for (int i = 0; i < count ; i++) {
+  			if(goodsArr[i].getCode().equals(code) ) {
+  				return i;
+  			}
+  		}
+  		return -1; //못찾았다!
+  	}
 
  public int delete(String code) {
 	 int locate = this.findLocate(code);
@@ -119,15 +148,15 @@ public class GoodsService{
 		 for(int i = locate; i< count-1; i++) {
 			 goodsArr[i] = goodsArr[i+1];
 		 }
+		 
+		 goodsArr[--count] =null;
+		 
+		 return 1;
 	 }
- }
+ 
    
    /**
     상품코드에 해당하는 가격, 설명 수정하기 
 	@return : true이면 수정완료, false이면 수정실패
    */
-   public boolean update(Goods goods){ //수정하려는 코드, 변경값 - 가격, 설명
-      
-       return false;
-   }
 }
