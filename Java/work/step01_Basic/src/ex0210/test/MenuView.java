@@ -6,15 +6,22 @@ import java.util.Scanner;
 public class MenuView{
 
 	 private Scanner sc = new Scanner(System.in);
-	 private GoodsService service = new GoodsService(); //전역변수 초기화
-
+	// private GoodsService service = new GoodsService(); //전역변수 초기화
+	 //인수가 있는 생성자가 필요한데 인수 없는걸 생성해서 에러가 난다. 
+	 private GoodsService service;
 	 
+	 
+	 public MenuView(String [][] data) {
+		 service = new GoodsService(data);
+	      
+		 
+	 }
   /**
     전체 메뉴를 출력하는 메소드 
   */
-   public void printMenu(String [][] data){//메인에서 전달한 2차원배열의 주소값전달
+   public void printMenu(){//메인에서 전달한 2차원배열의 주소값전달
 	//전달 받은 초기치 데이터를 서비스에 전달해서 배열에 저장한다.
-      service.init(data);
+  //    service.init(data);
       
       
 	  while(true){
@@ -42,7 +49,7 @@ public class MenuView{
 				 this.inputDeleteCode();
 					break;	 
 			 case 9 : 
-				 System.out.println("다음에 또 이용해ㅜㅈ세요. 프로그램 종료합니다.");
+				 System.out.println("다음에 또 이용해주세요. 프로그램 종료합니다.");
 				 System.exit(0); //프로그램종료 메소드 
 			 break;
 			 default: System.out.println("메뉴는 1~4 or 9 만 입력해주세요.");
@@ -118,7 +125,7 @@ public class MenuView{
 	   
 
 	   //위 3개의 정보를 하나의 Goods객체로 만든다.
-	   Goods goods = new Goods();
+	   Goods goods = new Goods(code, price, explain);
 	   
 	   goods.setCode(code);
        goods.setPrice(price);

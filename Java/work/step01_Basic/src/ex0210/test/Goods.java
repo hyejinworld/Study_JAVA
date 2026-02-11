@@ -8,6 +8,31 @@ public class Goods{
 	private int price;//가격 0 
 	private String explain;//설명 null
 	
+	
+	
+
+  	public Goods() {
+    }
+
+
+    public Goods(String code, String name, int price, String explain) {
+       // this.code = code;
+    	this(code, price, explain);
+        this.name = name;
+//        this.price = price;
+//        this.explain = explain;
+    }
+
+
+	
+	public Goods(String code, int price, String explain) {
+	
+		this.code = code;
+        this.price = price;
+        this.explain = explain;
+	}
+
+
 	public String getCode() {
 		return code;
 	}

@@ -20,11 +20,21 @@ public class GoodsService{
 			 
 		};
    */
-   public  void init(String [][] data){//MenuView에서 전달받은 2차원배열의 주소 전달
-     for(int i=0; i< data.length ; i++){ //5
-		goodsArr[count++] = this.create( data[i] );	
-	 }
+	
+	//생성자 추가
+	 public GoodsService(String[][] data) { //메뉴java에서 오류가 난다. 
+		    for (int i = 0; i < data.length; i++) {
+		        if(count < goodsArr.length){
+		            goodsArr[count++] = this.create(data[i]);
+		}
+		        
+//   public  void init(String [][] data){//MenuView에서 전달받은 2차원배열의 주소 전달
+//     for(int i=0; i< data.length ; i++){ //5
+//		goodsArr[count++] = this.create( data[i] );	
+//	 }
 
+		    
+		    }
    }//메소드끝
 
 
