@@ -5,10 +5,10 @@ public class SwitchExam01 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		double ns = (int)(Math.random()*12 + 1);
-		System.out.println("난수 = "+ns);
+		System.out.println("���� = "+ns);
 
 			 int month = (int) ns;
-			 System.out.println("변환" + month );
+			 System.out.println("��ȯ" + month );
 			 
 			 int day =0;
 			 
@@ -78,7 +78,7 @@ public class SwitchExam01 {
 	day = switch(month) {
 	case 2 -> 28;
 	case 4,6,9,11 -> {
-	System.out.println("하이하이");
+	System.out.println("��������");
 	yield 30;
 	}
 	default  ->  31; 
@@ -88,7 +88,7 @@ public class SwitchExam01 {
 
 
 	
-			 System.out.println(month+"월은" + day + "일까지 있습니다.");
+			 System.out.println(month+"����" + day + "�ϱ��� �ֽ��ϴ�.");
 			 
 	}
 	
