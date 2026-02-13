@@ -87,7 +87,7 @@ public class PartTime {
 	}
     
 	
-public void massage() {
+public void message() {
 		
 	}
 	

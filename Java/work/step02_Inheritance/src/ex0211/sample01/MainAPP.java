@@ -1,8 +1,9 @@
 package ex0211.sample01;
 
 /**
- * @param args
- */
+ * @param args
+ */
+public class MainAPP{
 public static void main(String[] args) {
 	
 	FullTime [] full = new FullTime[3];
@@ -19,7 +20,44 @@ public static void main(String[] args) {
 	//출력화면을 보고 코딩...
 
 	
+//	for (int i = 0; i<full.length; i++) {
+//		System.out.println(full[i]);
+//	}
 	
+	for( FullTime f : full) {
+		System.out.println(f);
+	}
+	
+	for( PartTime p : part) {
+		System.out.println(p);
+	}
+	
+
+	
+//	FullTime f0 = full[0];
+//	System.out.println(f0.toString());
+//	f0.message();
+//	
+//	FullTime f1 = full[1];
+//	System.out.println(f1.toString());
+//	f1.message();
+//	
+//	FullTime f2 = full[2];
+//	System.out.println(f2.toString());
+//	f2.message();
+//	
+//	
+//	PartTime p0 = part[0];
+//	System.out.println(p0.toString());
+//	p0.message();
+//	
+//	PartTime p1 = part[1];
+//	System.out.println(p1.toString());
+//	p1.message();
+
+
 }
+
+//to
 
 }

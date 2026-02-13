@@ -1,87 +1,96 @@
-package ex0211.sample01;
+package ex0211.sample02;
 
-public class FullTime {
-	private int empNo;
+public class PartTime {
+    private int empNo;
     private String eName;
     private String job;
     private int mgr;
     private String hiredate;
     private String deptName;
-    private int salary;
-    private int bonus;
+    private int timePay;
 
-    public FullTime() {
-    	
-    }
-    public FullTime(int empNo, String eName, String job, int mgr, String hiredate, String deptName,
-    		int salary, int bonus) {
+    
+    public PartTime() {
+
+}    
+    
+    public PartTime(int empNo, String eName, String job, int mgr, String hiredate, String deptName, int timePay){ {
     	this.empNo = empNo;
     	this.eName = eName;
     	this.job = job;
     	this.mgr = mgr;
     	this.hiredate = hiredate;
     	this.deptName = deptName;
-    	this.salary = salary;
-    	this.bonus = bonus;
-    
-
+    	this.timePay = timePay;
+    	
     }
+    
+    
+    
+}
+
 	public int getEmpNo() {
 		return empNo;
 	}
+
 	public void setEmpNo(int empNo) {
 		this.empNo = empNo;
 	}
+
 	public String geteName() {
 		return eName;
 	}
+
 	public void seteName(String eName) {
 		this.eName = eName;
 	}
+
 	public String getJob() {
 		return job;
 	}
+
 	public void setJob(String job) {
 		this.job = job;
 	}
+
 	public int getMgr() {
 		return mgr;
 	}
+
 	public void setMgr(int mgr) {
 		this.mgr = mgr;
 	}
+
 	public String getHiredate() {
 		return hiredate;
 	}
+
 	public void setHiredate(String hiredate) {
 		this.hiredate = hiredate;
 	}
+
 	public String getDeptName() {
 		return deptName;
 	}
+
 	public void setDeptName(String deptName) {
 		this.deptName = deptName;
 	}
-	public int getSalary() {
-		return salary;
+
+	public int getTimePay() {
+		return timePay;
 	}
-	public void setSalary(int salary) {
-		this.salary = salary;
+
+	public void setTimePay(int timePay) {
+		this.timePay = timePay;
 	}
-	public int getBonus() {
-		return bonus;
-	}
-	public void setBonus(int bonus) {
-		this.bonus = bonus;
+    
+	
+public void message() {
+		
 	}
 	
-		public void message() {
-		System.out.println(eName+ "은 정규직 사원입니다");
-	}
-
-	public String toString() {
-		return empNo +eName + job+ mgr +hiredate + deptName + salary+bonus ;
-	}
-
-
+		public String toString() {
+			return empNo + eName + job + mgr + hiredate + deptName + timePay ; 
+		}
 }
