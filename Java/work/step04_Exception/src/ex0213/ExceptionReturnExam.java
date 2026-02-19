@@ -8,7 +8,7 @@ public class ExceptionReturnExam {
 	    		// return; //메소드를 빠져나가라
 	    		 //throw new RuntimeException("예외발생"); // unchecked 예외
 	    	 //throw new RuntimeException("예외발생"); // checked 예외
-	    		System.exit(0);
+	    		System.exit(0); //파이널 실행안됨 
 	    	 throw new Exception("예외발생");
 	    	 }
 	    	 System.out.println(i+"입니다.");
