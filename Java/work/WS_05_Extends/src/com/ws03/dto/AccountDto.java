@@ -52,6 +52,7 @@ public class AccountDto implements Comparable<AccountDto> {
 		this.userSeq = userSeq;
 	}
 
+	//compareto 추가 
 	@Override
 	public int compareTo(AccountDto o) {
 		
