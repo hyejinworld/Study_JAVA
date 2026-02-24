@@ -3,7 +3,6 @@ package mvc.controller;
 import java.util.List;
 
 import mvc.dto.Electronics;
-import mvc.exception.DMLException;
 import mvc.exception.DuplicateModelNoEexepction;
 import mvc.exception.ElectronicsArrayBoundsException;
 import mvc.exception.SearchNotFoundException;
@@ -12,7 +11,7 @@ import mvc.service.ElectronicsServiceImpl;
 import mvc.view.FailView;
 import mvc.view.SuccessView;
 
-
+ 
 
 /**
  * View와 Model 사이에서 중간 역할 
@@ -108,6 +107,10 @@ public class ElectronicsController {
     }
     /////////////////////////////////////////////////////////////////
     
+    
+    public void saveObject() {
+    	
+    }
 }
 
 

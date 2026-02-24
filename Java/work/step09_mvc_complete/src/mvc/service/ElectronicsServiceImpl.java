@@ -172,7 +172,8 @@ public class ElectronicsServiceImpl implements ElectronicsService {
 	@Override
 	public void saveObject() {
 		// TODO Auto-generated method stub
-		
+
+		//현재 리스트를 파일에 저장한다. 
 	}
 	
 	/*@Override

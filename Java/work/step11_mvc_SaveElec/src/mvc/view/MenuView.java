@@ -44,7 +44,7 @@ public class MenuView{
 				   controller.selectSortByPrice();
 				   break;
 			   case "9" : 
-				   //파일저장
+				   controller.saveObject();
                  System.exit(0);
 			   default:
 				   System.out.println("메뉴를 다시 선택해주세요!!!!");

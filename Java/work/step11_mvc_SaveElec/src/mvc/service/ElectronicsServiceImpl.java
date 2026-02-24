@@ -1,5 +1,8 @@
 package mvc.service;
 
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -159,7 +162,7 @@ public class ElectronicsServiceImpl implements ElectronicsService {
 		
 				
 				
-				
+	
 		
 		/*Collections.sort(sortList, (o1,o2) ->{
 			int result =  (o1.getModelPrice() - o2.getModelPrice()) == 0 
@@ -174,9 +177,22 @@ public class ElectronicsServiceImpl implements ElectronicsService {
 
 	@Override
 	public void saveObject() {
-		// TODO Auto-generated method stub
-		
-	}
+		try (BufferedOutputStream bos = new BufferedOutputStream(
+			new FileOutputStream("testelectronics.txt"));
+			ObjectOutputStream oos = new ObjectOutputStream(bos)) {
+
+			oos.writeObject(list);
+			bos.flush(); // 버퍼를 비워라
+			System.out.println("파일 저장 완료입니다.^^");
+			} catch (Exception e) {
+
+			e.printStackTrace();
+
+			}
+
+			}
+
+	
 	
 	/*@Override
 	public List<Electronics> selectSortByPrice() {
