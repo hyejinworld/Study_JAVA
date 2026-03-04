@@ -7,7 +7,7 @@ public class Electronics /*implements Comparable<Electronics>*/{
     private int modelNo;
     private String modelName;
     private int modelPrice;
-    private String modelDetail;
+    private String modelDetail; 
 
     // 생성자 3개
     public Electronics () {}

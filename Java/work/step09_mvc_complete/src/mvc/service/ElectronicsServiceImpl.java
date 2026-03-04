@@ -63,7 +63,6 @@ public class ElectronicsServiceImpl implements ElectronicsService {
 		try {
 	    	//모델번호 중복여부 체크
 			this.searchByModelNo(electronics.getModelNo());
-			
 		    throw new DuplicateModelNoEexepction(electronics.getModelNo()+"중복이므로 등록할수 없습니다.");
 		 
 		}catch (SearchNotFoundException e) {
@@ -102,7 +101,8 @@ public class ElectronicsServiceImpl implements ElectronicsService {
 		//인수로 전달된 모델번호에 해당하는 전자제품이 있는지 검색한다.
     	
          Electronics dbElectronics =  this.searchByModelNo(electronics.getModelNo());
-         
+    
+    	
         // 수정
          dbElectronics.setModelDetail( electronics.getModelDetail()  );
     }
