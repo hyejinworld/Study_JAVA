@@ -61,20 +61,6 @@ public class Goods {
 		 */
 
 	 
-	    @Override
-		public int hashCode() {
-			return goodsId.hashCode();
-		}
-	 
-	 @Override
-		public boolean equals(Object obj) {
-			Goods other = (Goods) obj;
-			if(goodsId.equals(other.goodsId)) {
-				return true;
-			}else {
-				return false;
-			}
-			
-		}
+	    
   
 }
