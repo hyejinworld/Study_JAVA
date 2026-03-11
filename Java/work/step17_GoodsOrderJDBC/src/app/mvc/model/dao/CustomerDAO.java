@@ -7,6 +7,6 @@ import app.mvc.model.dto.Customer;
 public interface CustomerDAO {
   /**
    * 로그인하기
-   * */
+   * */ //로그인 테스트
 	Customer login(String userId, String userPwd)throws SQLException;
 }
